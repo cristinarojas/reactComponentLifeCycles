@@ -6,6 +6,7 @@ import './App.css';
 import Coins from './components/Coins';
 import Notes from './components/Notes';
 import Chart from './components/Chart';
+import Animation from './components/Animation';
 
 // Data
 import { notes1, notes2 } from './components/data';
@@ -68,6 +69,8 @@ class App extends Component {
         <Chart
           columns={this.columns}
           chartType={this.state.chartType} />
+
+        <Animation />
 
         <p>
           Chart type
