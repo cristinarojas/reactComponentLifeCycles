@@ -1,3 +1,5 @@
+// Pure components do less renders in comparison to a class and functional component
+// better performance
 import React, { PureComponent } from 'react';
 
 class Result extends PureComponent {

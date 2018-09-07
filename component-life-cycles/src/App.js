@@ -8,6 +8,8 @@ import Notes from './components/Notes';
 import Chart from './components/Chart';
 import Animation from './components/Animation';
 import Numbers from './components/Numbers';
+import Header from './components/FunctionalComponent';
+import Xss from './components/Xss';
 
 // Data
 import { notes1, notes2 } from './components/data';
@@ -80,6 +82,10 @@ class App extends Component {
         </p>
 
         <Numbers />
+
+        <Header />
+
+        <Xss />
       </div>
     );
   }
