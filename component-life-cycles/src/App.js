@@ -7,6 +7,7 @@ import Coins from './components/Coins';
 import Notes from './components/Notes';
 import Chart from './components/Chart';
 import Animation from './components/Animation';
+import Numbers from './components/Numbers';
 
 // Data
 import { notes1, notes2 } from './components/data';
@@ -77,6 +78,8 @@ class App extends Component {
           <button type="button" onClick={this.setBarChart}>Bar</button>
           <button type="button" onClick={this.setLineChart}>Line</button>
         </p>
+
+        <Numbers />
       </div>
     );
   }
