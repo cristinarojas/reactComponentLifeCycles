@@ -11,6 +11,7 @@ import Numbers from './components/Numbers';
 import Header from './components/FunctionalComponent';
 import Xss from './components/Xss';
 import Calculator from './components/Calculator';
+import Person from './components/Person';
 
 // Data
 import { notes1, notes2 } from './components/data';
@@ -89,6 +90,8 @@ class App extends Component {
         <Xss />
 
         <Calculator />
+
+        <Person />
       </div>
     );
   }
