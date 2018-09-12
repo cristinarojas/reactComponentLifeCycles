@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "c3": "^0.6.7",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.11.1",
     "moment": "^2.22.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",

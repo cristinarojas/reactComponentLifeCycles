@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './Popup.css';
 
 // Components
 import Coins from './components/Coins';
@@ -12,6 +13,7 @@ import Header from './components/FunctionalComponent';
 import Xss from './components/Xss';
 import Calculator from './components/Calculator';
 import Person from './components/Person';
+import Popup from 'react-popup';
 
 // Data
 import { notes1, notes2 } from './components/data';
@@ -92,6 +94,8 @@ class App extends Component {
         <Calculator />
 
         <Person />
+
+        <Popup />
       </div>
     );
   }

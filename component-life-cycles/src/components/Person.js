@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Popup from 'react-popup'; // allows to use JSX code in its content.
 import './person.css'
+
 class Person extends Component {
   constructor() {
     super();
@@ -40,6 +42,26 @@ class Person extends Component {
         lastName: lastName === ''
       }
     });
+
+    // we will display the popup just if the data is received.
+    if (firstName !== '' && lastName !== '' && email !== '') {
+      Popup.create({
+        title: 'Person Information',
+        content: (
+          <div>
+            <p><strong>Name:</strong> {firstName} {lastName}</p>
+            <p><strong>Email:</strong> {email}</p>
+            {phone && <p><strong>Phone:</strong> {phone}</p>}
+          </div>
+        ),
+        buttons: {
+          right: [{
+            text: 'Close',
+            action: popup => popup.close() // close the popup - react popup permit create an action.
+          }],
+        },
+      });
+    }
 
     // data is an object with all information of the local state.
     const data = {
