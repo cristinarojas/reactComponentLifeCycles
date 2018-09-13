@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import './Popup.css';
+import Helmet from 'react-helmet';
+import Popup from 'react-popup';
 
 // Components
 import Coins from './components/Coins';
@@ -13,12 +12,16 @@ import Header from './components/FunctionalComponent';
 import Xss from './components/Xss';
 import Calculator from './components/Calculator';
 import Person from './components/Person';
-import Popup from 'react-popup';
-
+// Images
+import logo from './logo.svg';
+// Styles
+import './App.css';
+import './Popup.css';
 // Data
 import { notes1, notes2 } from './components/data';
 
 class App extends Component {
+
   constructor(props) {
     super(props);
 
@@ -64,6 +67,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Helmet
+          title="xxxx"
+          meta={[
+            { name: 'title', content: 'Person Information' },
+            { name: 'description', content: 'This recipe talks react'}
+          ]}
+        />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
@@ -102,3 +112,9 @@ class App extends Component {
 }
 
 export default App;
+
+// => (HTML HACE UN RETURN DIRECTO)
+// => { HACER LOGICA Y AL FINAL HACE UN RETURN MANUAL }
+// [*] affect all the extensions.
+// [*.html] affect specific extension.
+// React Helmet package is the best way to handle the title and metatags to improve SEO in web sites.

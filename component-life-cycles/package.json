@@ -6,11 +6,14 @@
     "c3": "^0.6.7",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
     "moment": "^2.22.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.0",
     "react-popup": "^0.9.3",
     "react-scripts": "1.1.5",
     "serialize-javascript": "^1.5.0"
@@ -19,6 +22,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .jsx,.js src",
+    "postmerge": "npm install",
+    "postrewrite": "npm install",
+    "precommit": "npm run lint"
   }
 }
